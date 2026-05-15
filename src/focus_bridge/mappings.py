@@ -11,7 +11,6 @@ Spec reference: https://focus.finops.org/focus-specification/v1-2/
 """
 
 from datetime import datetime, timezone
-from decimal import Decimal
 
 
 # --- Date/time mappings ---------------------------------------------------
