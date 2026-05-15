@@ -1,0 +1,31 @@
+[project]
+name = "focus-bridge"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "trentpalumboit", email = "trentpalumboit@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "polars>=1.40.1",
+    "pyarrow>=24.0.0",
+    "pydantic>=2.13.4",
+    "typer>=0.25.1",
+]
+
+[project.scripts]
+focus-bridge = "focus_bridge:main"
+
+[build-system]
+requires = ["uv_build>=0.11.14,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "hypothesis>=6.152.7",
+    "mypy>=2.1.0",
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.15.13",
+]
