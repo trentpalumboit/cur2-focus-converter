@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-focus-bridge = "focus_bridge:main"
+focus-bridge = "focus_bridge.cli:app"
 
 [build-system]
 requires = ["uv_build>=0.11.14,<0.12.0"]
