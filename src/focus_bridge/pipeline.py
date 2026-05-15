@@ -149,6 +149,10 @@ def convert_cur_to_focus(input_path: Path, output_path: Path) -> None:
     ]
     focus_df = with_costs.select(focus_columns)
 
-    # Step 5: Write to Parquet.
+    # Step 5: Validate against FOCUS 1.2 spec before writing.
+    from focus_bridge.validation import validate_strict
+    validate_strict(focus_df)
+
+    # Step 6: Write to Parquet.
     output_path.parent.mkdir(parents=True, exist_ok=True)
     focus_df.write_parquet(output_path)
