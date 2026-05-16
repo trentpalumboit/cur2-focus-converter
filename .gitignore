@@ -5,3 +5,6 @@ __pycache__/
 .coverage
 .mypy_cache/
 .ruff_cache/
+samples/inputs/real_cur*
+samples/outputs/real_focus*
+.DS_Store

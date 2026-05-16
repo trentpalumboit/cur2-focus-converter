@@ -104,7 +104,7 @@ def convert_cur_to_focus(input_path: Path, output_path: Path) -> None:
         pl.col("line_item_usage_account_id").alias("SubAccountId"),
         pl.col("line_item_resource_id").alias("ResourceId"),
         pl.col("product_region_code").alias("RegionId"),
-        pl.col("product_product_name").alias("ServiceName"),
+        pl.col("line_item_product_code").alias("ServiceName"),
         pl.col("line_item_line_item_description").alias("ChargeDescription"),
         pl.col("pricing_unit").alias("PricingUnit"),
         pl.col("line_item_usage_amount").alias("ConsumedQuantity"),
